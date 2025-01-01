@@ -217,4 +217,11 @@ input[type="checkbox"]
         margin-top: 5px;
         font-size: 10vw;
     }
+    
+    .signature
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+    }
 }
