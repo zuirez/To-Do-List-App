@@ -1,0 +1,220 @@
+:root
+{
+    --background: #101114;
+    --text-color: #F9F9F9;
+    --accent-color: #00ffc4;
+    --primary-color: #1C1D20;
+    --secondary-color: #575b64;
+}
+
+*
+{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: "Ubuntu", serif;
+    font-style: normal;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+body
+{
+    background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+h1
+{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--accent-color);
+}
+
+.container
+{
+    width: 700px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.search
+{
+    position: relative;
+}
+
+#searchBar
+{
+    height: 51px;
+    width: 100%;
+    background-color: var(--background);
+    padding: 15px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 100px;
+    outline: none;
+    color: var(--accent-color)
+}
+
+#searchButton
+{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    border-radius: 30px;
+    top: 0px;
+    right: 0px;
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.task
+{
+    margin: 0px 10px 15px 10px;
+    padding: 0px 8px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    flex-grow: 1;
+    border-radius: 8px; 
+    display: flex;
+    align-items: center;
+}
+
+.task .todo-text
+{
+    padding: 10px;
+    padding-right: 0px;
+    flex-grow: 1;
+    transition: 200ms ease;
+}
+
+.delete-button
+{
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button:hover svg
+{
+    fill: rgb(255, 0, 0);
+    transition: 200ms ease;
+}
+
+.custom-checkbox
+{
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    transition: 200ms ease;
+}
+
+.custom-checkbox svg
+{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: -2px;
+    top: -1px;  
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox
+{
+    background-color: var(--accent-color);
+    transition: 200ms ease;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox svg
+{
+    fill: var(--primary-color);
+}
+
+input[type="checkbox"]:checked ~ .todo-text
+{
+    color: var(--secondary-color);
+    text-decoration: line-through;
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}
+
+.signature
+{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.signature h2
+{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.signature a
+{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media(max-width: 500px)
+{
+    html
+    {
+        font-size: 14px;
+    }
+
+    #searchButton
+    {
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        border-radius: 30px;
+        top: 60px;
+        right: 0px;
+        background-color: var(--accent-color);
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    ul
+    {
+        margin-top: 55px;
+    }
+
+    h1
+    {
+        margin-top: 5px;
+        font-size: 10vw;
+    }
+}
