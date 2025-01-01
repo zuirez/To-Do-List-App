@@ -170,7 +170,7 @@ input[type="checkbox"]
 {
     display: flex;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: -30px;
 }
 
 .signature h2
